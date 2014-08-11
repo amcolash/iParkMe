@@ -111,6 +111,7 @@ console.log(position);
   }
 
   var rotationImg = document.getElementById("rotation");
+  var clearButton = document.getElementById("clear");
 
   var deltaX = savedLong - currentLong;
   var deltaY = savedLat - currentLat;
@@ -124,9 +125,15 @@ console.log(position);
     if (position.coords.heading) {
       rotationImg.style.webkitTransform = 'rotate('+ (angle - position.coords.heading) + 'deg)';
     } else {
-      rotationImg.style.webkitTransform = 'rotate(' + andgle + 'deg)';
+      rotationImg.style.webkitTransform = 'rotate(' + angle + 'deg)';
     }
   }
+
+if (savedLong == 0 || savedLat == 0) {
+  clearButton.style.display = "none";
+} else {
+  clearButton.style.display = "inline-block";
+}
 
   map.setCenter(newPoint);
 };
@@ -157,6 +164,9 @@ function saveLocation() {
     rotationImg.style.display = "block";
   }
 
+  var clearButton = document.getElementById("clear");
+  clearButton.style.display = "inline-block";
+
   var alert = document.getElementById("savedAlert");
   alert.style.visibility = "visible";
   alert.className = "alert alert-info fade-in col-xs-10 col-xs-offset-1";
@@ -178,6 +188,9 @@ function clearLocation() {
 
     var rotationImg = document.getElementById("rotation");
     rotationImg.style.display = "none";
+
+    var clearButton = document.getElementById("clear");
+    clearButton.style.display = "none";
 
     var alert = document.getElementById("clearedAlert");
     alert.style.visibility = "visible";
