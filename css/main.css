@@ -1,0 +1,89 @@
+/* Using colorscheme from: http://colorschemedesigner.com/#3p11Tw0w0w0w0 */
+
+/* CSS for iPhone 2G/3G/4/4S */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+  .top {
+    margin-top: 5px;
+  }
+
+  .alert {
+    top: 18px;
+  }
+
+  button {
+      margin: 8px;
+  }
+
+  h1 {
+    margin-top: 5px;
+  }
+}
+
+/* CSS for iPhone 5/5S */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
+  .top {
+    margin-top: 20px;
+  }
+
+  .alert {
+    top: 38px;
+  }
+
+  h1 {
+    margin-top: 25px;
+  }
+
+  button {
+    margin: 15px;
+  }
+}
+
+body {
+  background-color: #216278;
+  color: #61B4CF;
+  text-shadow: 2px 2px 2px rgba(30, 30, 30, 0.85);
+}
+
+button {
+  text-shadow: 2px 2px 1px rgba(30, 30, 30, 0.65);
+}
+
+.alert {
+  text-shadow: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s ease-in;
+}
+
+.alert.fade-out {
+  opacity: 0;
+}
+
+.alert.fade-in {
+  opacity: 0.85;
+}
+
+#rotation {
+  max-width: 32px;
+  margin: auto;
+  display: none;
+}
+
+#arrow {
+  width: 32px;
+}
+
+#main {
+  text-align: center;
+  /*display: none;*/
+}
+
+#mapholder {
+  margin: auto;
+  border-radius: 7px;
+}
+
+#settingsIcon img {
+  width: 32px;
+}

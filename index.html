@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+    <!-- iOS Settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+    <!-- iPhone SPLASHSCREEN-->
+    <link href="img/apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+    <!-- iPhone (Retina) SPLASHSCREEN-->
+    <link href="img/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 460px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPhone 5 (Retina) SPLASHSCREEN-->
+    <link href="img/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- iOS Icons -->
+    <link href="img/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="img/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
+
+    <title>iParkMe</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Main css file -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row top">
+        <div id="main" class="col-xs-12">
+
+          <div id="savedAlert" class="alert alert-info col-xs-10 col-xs-offset-1"><strong>Current location saved</strong></div>
+          <div id="clearedAlert" class="alert alert-danger col-xs-10 col-xs-offset-1"><strong>Current location cleared</strong></div>
+
+          <div id="header">
+            <h1>Where Did I Park?</h1>
+          </div>
+
+          <div class="row top"></div>
+          <div id="mapholder"></div>
+
+          <div class="row top"></div>
+          <div id="footer">
+            <div id="rotation">
+              <img id="arrow" src="img/arrow.png">
+              <!-- <img id="dot" src="http://earth.google.com/images/kml-icons/track-directional/track-none.png"> -->
+            </div>
+            <!-- <span id="rotationDeg"></span> -->
+
+            <div class="row"></div>
+
+            <button type="button" class="btn btn-warning" onclick="saveLocation()">Save Current Location</button>
+            <button type="button" class="btn btn-danger" onclick="clearLocation()">Clear Previous Location</button>
+
+            <!-- <div id="coordinates" class="col-xs-12"></div> -->
+
+            <!--
+            <div id="coordinates" class="col-xs-10"></div>
+            <div id="settingsIcon" class="col-xs-2">
+              <img src="img/Settings.png">
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include google maps api for interactive map -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+    <!-- My JS (and W3) -->
+    <script type="text/javascript" src="js/ready.min.js"></script>
+    <script type="text/javascript" src="js/gps.js"></script>
+  </body>
+</html>
