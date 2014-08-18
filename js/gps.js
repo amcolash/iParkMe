@@ -175,10 +175,10 @@ function saveLocation() {
 
   var alert = document.getElementById("savedAlert");
   alert.style.visibility = "visible";
-  alert.className = "alert alert-info fade-in col-xs-10 col-xs-offset-1 text-center top";
+  alert.className = "alert alert-info fade-in col-xs-10 col-xs-offset-1 text-center topMargin";
 
   setTimeout(function(){
-    alert.className = "alert alert-info fade-out col-xs-10 col-xs-offset-1 text-center top";
+    alert.className = "alert alert-info fade-out col-xs-10 col-xs-offset-1 text-center topMargin";
   },2000);
 
 };
@@ -200,11 +200,11 @@ function clearLocation() {
 
     var alert = document.getElementById("clearedAlert");
     alert.style.visibility = "visible";
-    alert.className = "alert alert-danger fade-in col-xs-10 col-xs-offset-1 text-center top";
+    alert.className = "alert alert-danger fade-in col-xs-10 col-xs-offset-1 text-center topMargin";
 
     setTimeout(function(){
     //where we can also call foo
-      alert.className = "alert alert-danger fade-out col-xs-10 col-xs-offset-1 text-center top";
+      alert.className = "alert alert-danger fade-out col-xs-10 col-xs-offset-1 text-center topMargin";
     },2000);
 
   }

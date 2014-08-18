@@ -88,3 +88,7 @@ button {
 #settingsIcon img {
   width: 32px;
 }
+
+.topMargin {
+  margin-top: 10px;
+}
