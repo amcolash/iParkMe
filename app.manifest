@@ -1,8 +1,9 @@
 CACHE MANIFEST
-# 2014-08-18 12:20PM v1.0.0
+# 2014-08-18 2:33PM v1.0.2
 
 # CSS
 css/bootstrap.min.css
+css/addtohomescreen.css
 css/main.css
 
 # Images
@@ -11,4 +12,9 @@ img/dot.png
 
 # JS
 js/ready.min.js
+js/addtohomescreen.min.js
 js/gps.js
+
+# Files to be accessed from the web each time
+NETWORK:
+*
