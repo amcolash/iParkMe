@@ -1,17 +1,21 @@
 /* Using colorscheme from: http://colorschemedesigner.com/#3p11Tw0w0w0w0 */
 
+/* Google font */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dosis Regular'), local('Dosis-Regular'), url(../fonts/dosis.woff) format('woff');
+}
+
 /* CSS for iPhone 2G/3G/4/4S */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
   .top {
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
   .alert {
     top: 18px;
-  }
-
-  button {
-      margin: 8px;
   }
 
   h1 {
@@ -32,16 +36,13 @@
   h1 {
     margin-top: 25px;
   }
-
-  button {
-    margin: 15px;
-  }
 }
 
 body {
   background-color: #216278;
   color: #61B4CF;
   text-shadow: 2px 2px 2px rgba(30, 30, 30, 0.85);
+  font-family: 'Dosis', sans-serif;
 }
 
 button {
@@ -69,6 +70,7 @@ button {
   max-width: 32px;
   margin: auto;
   display: none;
+  padding: 10px 0px;
 }
 
 #arrow {

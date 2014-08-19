@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2014-08-18 3:09AM v1.0.2
+# 2014-08-19 11:09AM v1.0.3
 
 # CSS
 css/bootstrap.min.css
@@ -9,6 +9,9 @@ css/main.css
 # Images
 img/arrow.png
 img/dot.png
+
+# Fonts
+fonts/dosis.woff
 
 # JS
 js/ready.min.js
