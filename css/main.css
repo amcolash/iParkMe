@@ -11,16 +11,16 @@
 /* CSS for iPhone 2G/3G/4/4S */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
   .top {
-    margin-top: 15px;
+    margin-top: 0px;
   }
-
+/*
   .alert {
     top: 18px;
-  }
-
+  }*/
+/*
   h1 {
     margin-top: 5px;
-  }
+  }*/
 }
 
 /* CSS for iPhone 5/5S */
@@ -29,13 +29,13 @@
     margin-top: 20px;
   }
 
-  .alert {
-    top: 38px;
+  #mapholder {
+    height: 300px !important;
   }
+}
 
-  h1 {
-    margin-top: 25px;
-  }
+.alert {
+  top: 18px;
 }
 
 body {
@@ -47,6 +47,7 @@ body {
 
 button {
   text-shadow: 2px 2px 1px rgba(30, 30, 30, 0.65);
+  margin-top: 15px;
 }
 
 .alert {
@@ -70,7 +71,10 @@ button {
   max-width: 32px;
   margin: auto;
   display: none;
-  padding: 10px 0px;
+}
+
+#rotBlock {
+  padding-top: 15px;
 }
 
 #arrow {
