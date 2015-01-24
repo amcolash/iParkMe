@@ -74,13 +74,13 @@ function init() {
 }
 
 /* Modified code from Daniel Vassallo, http://stackoverflow.com/questions/3305225/
-      real-time-gps-tracker-on-just-html-js-and-google-maps-to-be-run-on-a-handphone */
+real-time-gps-tracker-on-just-html-js-and-google-maps-to-be-run-on-a-handphone */
 function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition);
-    } else {
-        alert("Error getting location, must allow location to be used.");
-    }
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else {
+    alert("Error getting location, must allow location to be used.");
+  }
 };
 
 function showPosition(position) {
@@ -90,7 +90,7 @@ function showPosition(position) {
   //$("#coordinates").html("Latitude: " + currentLat + "<br>Longitude: " +
   //  currentLong + "<br>Accuracy: " + accuracy + "<br>SavedLat: " + savedLat +
   //  "<br>SavedLong: " + savedLong);
-console.log(position);
+  console.log(position);
 
   var newPoint = new google.maps.LatLng(currentLat, currentLong);
 
@@ -138,17 +138,18 @@ console.log(position);
     rotationImg.style.display = "block";
 
     if (window.DeviceOrientationEvent) {
-      rotationImg.style.webkitTransform = 'rotate('+ (angle + heading) + 'deg)';
+      var tempHeading = Math.atan2(Math.cos(heading), Math.sin(heading));
+      rotationImg.style.webkitTransform = 'rotate('+ (angle - tempHeading) + 'deg)';
     } else {
       rotationImg.style.webkitTransform = 'rotate(' + angle + 'deg)';
     }
   }
 
-if (savedLong == 0 || savedLat == 0) {
-  clearButton.style.display = "none";
-} else {
-  clearButton.style.display = "inline-block";
-}
+  if (savedLong == 0 || savedLat == 0) {
+    clearButton.style.display = "none";
+  } else {
+    clearButton.style.display = "inline-block";
+  }
 
   map.setCenter(newPoint);
 };
@@ -212,7 +213,7 @@ function clearLocation() {
     alert.className = "alert alert-danger fade-in col-xs-10 col-xs-offset-1 text-center topMargin";
 
     setTimeout(function(){
-    //where we can also call foo
+      //where we can also call foo
       alert.className = "alert alert-danger fade-out col-xs-10 col-xs-offset-1 text-center topMargin";
     },2000);
 
@@ -241,12 +242,12 @@ function getCookie(cname) {
 }
 
 function listCookies() {
-    var theCookies = document.cookie.split(';');
-    var aString = '';
-    for (var i = 1 ; i <= theCookies.length; i++) {
-        aString += i + ' ' + theCookies[i-1] + "\n";
-    }
-    return aString;
+  var theCookies = document.cookie.split(';');
+  var aString = '';
+  for (var i = 1 ; i <= theCookies.length; i++) {
+    aString += i + ' ' + theCookies[i-1] + "\n";
+  }
+  return aString;
 }
 
 function deleteAllCookies() {
