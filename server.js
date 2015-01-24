@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + 'src/'));
 app.use(errorHandler({
   dumpExceptions: true,
   showStack: true

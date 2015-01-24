@@ -138,7 +138,7 @@ console.log(position);
     rotationImg.style.display = "block";
 
     if (window.DeviceOrientationEvent) {
-      rotationImg.style.webkitTransform = 'rotate('+ (angle - heading) + 'deg)';
+      rotationImg.style.webkitTransform = 'rotate('+ (angle + heading) + 'deg)';
     } else {
       rotationImg.style.webkitTransform = 'rotate(' + angle + 'deg)';
     }
