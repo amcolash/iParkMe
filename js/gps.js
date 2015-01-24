@@ -11,6 +11,8 @@ var savedLong = 0;
 
 var map = null;
 
+var heading = 0;
+
 domready(function () {
   console.log("DOM Ready");
 
@@ -23,6 +25,13 @@ domready(function () {
 });
 
 function init() {
+
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', function(e) {
+      console.log(e.alpha);
+      heading = e.alpha;
+    }, false);
+  }
 
   var mapholder = document.getElementById('mapholder');
   mapholder.style.height='250px';
@@ -128,8 +137,8 @@ console.log(position);
   } else {
     rotationImg.style.display = "block";
 
-    if (position.coords.heading) {
-      rotationImg.style.webkitTransform = 'rotate('+ (angle - position.coords.heading) + 'deg)';
+    if (window.DeviceOrientationEvent) {
+      rotationImg.style.webkitTransform = 'rotate('+ (angle - heading) + 'deg)';
     } else {
       rotationImg.style.webkitTransform = 'rotate(' + angle + 'deg)';
     }

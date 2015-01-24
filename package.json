@@ -1,0 +1,22 @@
+{
+  "name": "iParkMe",
+    "version": "1.4.0",
+    "description": "Simple webapp to help you find where you parked",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/amcolash/iParkMe.git"
+    },
+    "author": "Andrew McOlash",
+    "homepage": "https://github.com/amcolash/iParkMe",
+    "dependencies": {
+      "express": "^4.1.2",
+      "body-parser": "^1.1.2",
+      "errorhandler": "^1.0.1",
+      "method-override": "^1.0.0"
+    }
+
+}
